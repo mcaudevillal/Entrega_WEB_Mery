@@ -1,0 +1,375 @@
++<!DOCTYPE html> <!--tipo de documento: html-->
+<html lang="en"> <!--lenguaje del html (inglés)-->
+  <head> <!--se abre la cabecera-->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Las tres etiquetas anteriores se refieren a los metadatos del html. Recogen el tipo de contenido, la codificación, la compatibilidad con dispositivos móviles-->
+    <title>Web CV Maria Caudevilla Lambán</title> <!--título-->
+    <!-- Bootstrap: biblioteca de código abierto con modelos de diseño web -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet" type="text/css">
+    <!-- los links anteriores son una serie de paquetes css y tipografías de la API de Google empleadas en el diseño de la web -->
+
+  </head> <!--se cierra la cabecera-->
+  <body> <!--se abre el cuerpo del código-->
+    <div class="wrapper" id="wrapper"> <!--la etiqueta "div" sirve para crear divisiones y agrupar elementos; "class" asigna nombres de clases al elemento; "id" le da un nombre al elemento-->
+      <header> <!--abre un encabezado-->
+        <div class="banner row" id="banner">
+          <div class="parallax text-center" style="background-image: url(img/portada_cantabria.jpg);"> <!--"style" permite especificar la información del estilo. En este caso, existe una imagen de fondo desde una ruta específica-->
+            <div class="parallax-pattern-overlay">
+              <div class="container align-center" style="height:600px;padding-top:60px;"> <!--esta información de estilo indica la altura del elemento y la posición con respecto al relleno del fondo ("padding")-->
+                <a href="#"> <!--este elemento ANCHOR crea un enlace directo a la propia web si se pulsa sobre la imagen o el nombre de la cabecera-->
+                  <img id="site-title" class=" wow fadeInDown" wow-data-delay="1s" wow-data-duration="0.8s" src="img\foto_cara.jpg" alt="" width="999999" height="275"> <!--propiedades y ruta de la imagen principal-->
+                </a> <!--fin del elemento-->
+                <h2 class="intro"> <!--abre un tipo de encabezado (texto)-->
+                  <a href="index.html"> <!--este elemento ANCHOR crea un enlace directo a la propia web si se pulsa sobre la imagen o el nombre de la cabecera-->
+                    <span style="color:white;">Maria <br> <!--se determinan las características del encabezado con "SPAN", en este caso el color de la letracolor; <br> sirve para saltar de línea-->
+                      Caudevilla <br>
+                      Lambán</span></a></h2>  <!--se cierra el estilo, el elemento y el encabezado-->
+        <div class="menu" style="top: 600px; left: -16px; height: 197px;">
+          <div class="navbar-wrapper">
+            <div class="container">
+              <div class="navwrapper">
+                <div class="navbar navbar-inverse navbar-static-top">
+                  <div class="container">
+                    <div class="navArea">
+                      <div class="navbar-collapse collapse">
+                        <!--se crean divisiones o bloques de elementos determinando las clases de las que constan-->
+                          <ul class="nav navbar-nav"> <!--ul "unordered list" crea una lista de elementos no ordenados; "class" asigna un nombre al elemento, normalmente son clases CSS-->
+                          <li class="menuItem active"><a href="#wrapper">Home</a></li> <!--el elemento "li" de "item list" declara cada uno de los elementos de una lista-->
+                          <li class="menuItem"><a href="#aboutme">Sobre mí</a></li> <!--"href="aboutme" permite que al clicar en la barra del navegador la página se desplace hasta el apartado al que se refiere-->
+                          <li class="menuItem"><a href="#capacidades">Capacidades</a></li>
+                          <li class="menuItem"><a href="#education">Formación</a></li>
+                          <li class="menuItem"><a href="#multimedia">Multimedia</a></li>
+                          <li class="menuItem"><a href="#contact">Contacto</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header> <!--se cierra la cabecera-->
+      <!--Sobre mí-->
+      <section class="aboutus" id="aboutme">
+        <div class="container">
+          <div class="heading text-center">
+            <h2>Sobre mí</h2>
+            <h3 style="text-align: center;">¡Hola a tod@s! ¡Gracias por visitar
+              mi web personal! Os la resumo: actualmente estudio un Máster en
+              Tecnologías de la Información Geográfica 🌏. Me interesan el mundo
+              de lo smart y la innovación tecnológica así como su aplicación al
+              sector turístico.</h3>
+          </div>
+        </div>
+      </section>
+      <!--Capacidades-->
+      <section class="specialties" id="capacidades">
+        <div class="container">
+          <div class="heading text-center">
+            <h2 style="margin-top: -53px;">Capacidades</h2>
+            <h3>Me considero una persona sociable, educada, organizada y
+              creativa, con la capacidad de trabajar en equipo. Soy responsable,
+              dinámica, exigente y perfeccionista en lo que hago.</h3>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 wow fadeInRight" data-wow-offset="0" data-wow-delay="0.5s">
+              <div class="skill">
+                <div class="progress-wrap ">
+                  <h3>Inglés</h3>
+                  <div class="progress"> <!--a partir de aquí se muestra el código de la creación de la barra de progreso atribuida a los idiomas-->
+                    <div class="progress-bar color1 " role="progressbar " aria-valuemin="0 " aria-valuemax="100 " style="width: 100% "> <!--se especifica el color, el rol de la clase, el valor míninmo, el máximo y el progreso adquirido con style-->
+                      <span class="bar-width ">100%</span> </div>
+                  </div>
+                </div>
+                <div class="progress-wrap ">
+                  <h3>Francés</h3>
+                  <div class="progress ">
+                    <div class="progress-bar color2 " role="progressbar " aria-valuemin="0 " aria-valuemax="100 " style="width: 80% ">
+                      <span class="bar-width ">80%</span> </div>
+                  </div>
+                </div>
+                <div class="progress-wrap ">
+                  <h3>Alemán</h3>
+                  <div class="progress ">
+                    <div class="progress-bar color3 " role="progressbar " aria-valuemin="0 " aria-valuemax="100 " style="width: 40% ">
+                      <span class="bar-width ">40%</span> </div>
+                  </div>
+                </div>
+                <div class="progress-wrap ">
+                  <h3>Italiano</h3>
+                  <div class="progress ">
+                    <div class="progress-bar color4 " role="progressbar " aria-valuemin="0 " aria-valuemax="100 " style="width: 50% ">
+                      <span class="bar-width ">50%</span> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 wow fadeInRight" data-wow-offset="0" data-wow-delay="0.7s"><img src="img\idiomas.jpg" width="400" height="300"> </div> <!--se crea una división y se escoge el tiempo de aparición de la misma a partir de que la imagen se actualice (F5) que contiene una imagen con una anchura y altura determinadas-->
+          </div>
+        </div>
+        <!--Educación-->
+    <section class="feedback" id="education">
+      <div class="container">
+        <div class="heading">
+          <h2>Formación</h2>
+        </div>
+      </div>
+      <div class="container">
+        <div class="col-md-4 wow fadeInRight" data-wow-offset="0" data-wow-delay="0.3s">
+          <div class="text-center">
+            <div class="hi-icon-wrap hi-icon-effect">
+              <h4>Máster en Tecnologías de la Información Geográfica para la
+                Ordenación del Territorio: Sistemas de Información Geográfica y
+                Teledetección</h4>
+              <h5>2018 -2019 (actualidad)</h5>
+              <i class="fa fa-laptop"></i>
+              <p>Universidad de Zaragoza</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 wow fadeInRight" data-wow-offset="0" data-wow-delay="0.6s">
+          <div class="text-center">
+            <div class="hi-icon-wrap hi-icon-effect">
+              <h4>Bachelor Business In Tourism With Event Management, 2017</h4>
+              <h5>Institute Technology of Sligo, Ireland</h5>
+              <p><br>
+              </p>
+              <p><br>
+              </p>
+              <i class="fa fa-book"></i>
+              <p>Calificación media: 9.46 (with distinction)</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 wow fadeInRight" data-wow-offset="0" data-wow-delay="0.9s">
+          <div class="text-center">
+            <div class="hi-icon-wrap hi-icon-effect" style="height: 551px;">
+              <h4>Grado en Turismo, 2018</h4>
+              <h5>Universidad de Granada</h5>
+              <p><br>
+              </p>
+              <p><br>
+              </p>
+              <p style="margin-top: -19px;"><br>
+              </p>
+              <i class="fa fa-gear"></i>
+              <p style="margin-top: 5px; height: 29px;">Calificación media:
+                8.341</p>
+              <br>
+              <ul style="text-align: left; margin-top: -26px;">
+                <li>2014 – 2016: Universidad de Granada</li>
+                <li>2016 – 2017: IT Sligo, ERASMUS</li>
+                <li>2017 – 2018: Universidad de Zaragoza, SICUE</li>
+              </ul>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row" style="text-align: justify;"> TFG: El uso del agua como
+          recurso natural y su gestión en el desarrollo del turismo recreacional
+          en alta montaña, con especial énfasis en el turismo de nieve en el
+          Pirineo Aragonés (Calificación: 9,3) </div>
+      </div>
+    </section>
+    <!--Multimedia-->
+    <section class= "multimedia" id="multimedia">
+      <div class="container">
+      <div class="heading">
+        <h2>Multimedia</h2>
+        <h3>A continuación puede visualizarse un video</h3>
+<video src="img\video.mp4" preload="auto" autoplay controls> <!--adición de un video desde la ruta correspondiente y las opciones de que se cargue y reproduzca automáticamente al abrir la página y que aparezcan los controles del video que, por defecto, no suelen aparecer-->
+
+      </div>
+    </div></section>
+    <!--Contacto-->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="heading">
+          <h2>Contacto</h2>
+          <h3>Si mi perfil te interesa no dudes en contactar conmigo a través
+            del siguiente formulario.</h3>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+
+            <div class="map">  <!--se añade un visor cartográfico de mi ubicación-->
+                <head>
+                    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+                  <style>
+                            #titulo{
+                        width: 100%;
+                        height: 30px;
+                        box-shadow: 5px 5px 5px rgb(153, 204, 104);
+                            }
+
+                            #visor{
+                        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        color: green;
+                            }
+
+                            #map {
+                        width: 100%;
+                        height: 370px;
+                        box-shadow: 5px 5px 5px #888;
+                    }
+                   </style>
+                </head>
+                  <body>
+                        <header id='titulo'>
+                            <p id="visor"><b>Mi ubicación</b></p>            </header>
+                    <div id = 'map'>
+                    </div>
+                    </body>
+                    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+                    <script>
+                         var map = L.map('map').
+                        setView([41.644957, -0.892205],
+                        10);
+
+                        L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+                        maxZoom: 18
+                        }).addTo(map);
+
+                        L.control.scale().addTo(map);
+                       
+                        L.marker([41.644957, -0.892205],{draggable: true}).addTo(map);
+                        </script>
+            </div>
+          </div>
+          <div class="contact-info">
+            <div class="col-md-5">
+              <h4>Información de contacto</h4>
+              <ul>
+                <li><i class="fa fa-home fa-2x"></i> Zaragoza</li>
+                <li><i class="fa fa-phone fa-2x"></i> +34 637 ** ** 13</li>
+                <li><i class="fa fa-envelope fa-2x"></i>
+                  mariacaudevillalam@hotmail.com</li>
+                  <!--se añade un enlace a mi CV en formato PDF-->
+                <li><i class="fa fa-download fa-2x"></i><a href="img\cv_caudevilla_maria_es.pdf"
+
+                    download="Descarga mi CV"> Descarga mi CV </a></li> 
+                    <!--se añade un visor cartográfico elabaroda con el plugin QGIS2WEB de QGIS, que se encuentra ubicado en un repositorio de GIT-->
+                    <li><i class="fa fa-download fa-2x"></i><a href="QGIS2WEB\index.html"
+
+                      download="Visor Cartográfico de Jaca"> Visor Cartográfico </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div id="sendmessage">Su mensaje ha sido enviado. ¡Muchas gracias!</div>
+            <div id="errormessage"></div>
+            <form action="" method="post" role="form" class="contactForm">
+              <div class="form-group"> <input name="name" class="form-control"
+
+                  id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars"
+
+                  type="text">
+                <div class="validation"></div>
+              </div>
+              <div class="form-group"> <input class="form-control" name="email"
+
+                  id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email"
+
+                  type="email">
+                <div class="validation"></div>
+              </div>
+              <div class="form-group"> <input class="form-control" name="subject"
+
+                  id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject"
+
+                  type="text">
+                <div class="validation"></div>
+              </div>
+              <div class="form-group"> <textarea class="form-control" name="message"
+
+rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validation"></div>
+              </div>
+              <div class="text-center"><button type="submit" class="contact submit">Send
+                  Message</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!--pie de página-->
+    <section class="footer" id="footer">
+      <p class="text-center"> <a href="#wrapper" class="gototop"><i class="fa fa-angle-double-up fa-2x"></i></a>
+      </p>
+      <div class="container">
+        <ul>
+          <li><a href="https://twitter.com/CaudevillaMaria"><i class="fa fa-twitter"></i></a><br>
+          </li>
+          <li><a href="https://www.facebook.com/maria.caudevillalamban.75"><i class="fa fa-facebook"></i></a><br>
+          </li>
+          <li><a href="https://www.linkedin.com/in/maria-caudevilla-lamban"><i class="fa fa-linkedin"></i></a><br>
+          </li>
+        </ul>
+        <p>© MARIA CAUDEVILLA LAMBAN. Todos los derechos reservados</p>
+        <div class="credits"> Designed by Maria Caudevilla </div>
+      </div>
+    </section>
+    <script src="js/jquery.js"></script>
+    <script src="js/modernizr.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menustick.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/easing.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/masonry.js"></script>
+    <script src="js/imgloaded.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/colorfinder.js"></script>
+    <script src="js/gridscroll.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+    wow = new WOW({}).init();
+  </script>
+    <script type="text/javascript">
+    jQuery(function($) {
+      $(document).ready(function() {
+        //enabling stickUp on the '.navbar-wrapper' class
+        $('.navbar-wrapper').stickUp({
+          parts: {
+            0: 'banner',
+            1: 'aboutme',
+            2: 'capacidades',
+            3: 'education',
+            4: 'multimedia',
+            5: 'contact'
+          },
+          itemClass: 'menuItem',
+          itemHover: 'active',
+          topMargin: 'auto',
+          position: "fixed"        });
+      });
+    });
+  </script>
+    <script src="contactform/contactform.js"></script>
+  </body>
+</html>

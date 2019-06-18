@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css"><link rel="stylesheet" href="css/L.Control.Locate.min.css">
+        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
+        <link rel="stylesheet" href="css/leaflet-measure.css">
+        <style>
+        #map {
+            width: 1154px;
+            height: 853px;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script><script src="js/L.Control.Locate.min.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="js/leaflet-control-geocoder.Geocoder.js"></script>
+        <script src="js/leaflet-measure.js"></script>
+        <script src="data/jaca_inventario_forestal_disuelto_1.js"></script>
+        <script>
+        var highlightLayer;
+        function highlightFeature(e) {
+            highlightLayer = e.target;
+
+            if (e.target.feature.geometry.type === 'LineString') {
+              highlightLayer.setStyle({
+                color: '#ffff00',
+              });
+            } else {
+              highlightLayer.setStyle({
+                fillColor: '#ffff00',
+                fillOpacity: 1
+              });
+            }
+            highlightLayer.openPopup();
+        }
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:28, minZoom:1
+        }).fitBounds([[42.421736432401964,-0.7455328293060949],[42.65282763335877,-0.3297965963086864]]);
+        var hash = new L.Hash(map);
+        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
+        L.control.locate({locateOptions: {maxZoom: 19}}).addTo(map);
+        var measureControl = new L.Control.Measure({
+            position: 'topleft',
+            primaryLengthUnit: 'meters',
+            secondaryLengthUnit: 'kilometers',
+            primaryAreaUnit: 'sqmeters',
+            secondaryAreaUnit: 'hectares'
+        });
+        measureControl.addTo(map);
+        document.getElementsByClassName('leaflet-control-measure-toggle')[0]
+        .innerHTML = '';
+        document.getElementsByClassName('leaflet-control-measure-toggle')[0]
+        .className += ' fas fa-ruler';
+        var bounds_group = new L.featureGroup([]);
+        function setBounds() {
+        }
+        var layer_OpenStreetMap_0 = L.tileLayer('http://a.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            opacity: 1.0,
+            attribution: '',
+        });
+        layer_OpenStreetMap_0;
+        map.addLayer(layer_OpenStreetMap_0);
+        function pop_jaca_inventario_forestal_disuelto_1(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? Autolinker.link(String(feature.properties['fid'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>esp1</strong><br />' + (feature.properties['esp1'] !== null ? Autolinker.link(String(feature.properties['esp1'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>Area (ha)</strong><br />' + (feature.properties['Area (ha)'] !== null ? Autolinker.link(String(feature.properties['Area (ha)'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>tablas_ifn</strong><br />' + (feature.properties['tablas_ifn'] !== null ? Autolinker.link(String(feature.properties['tablas_ifn'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tablas_i_1'] !== null ? Autolinker.link(String(feature.properties['tablas_i_1'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tablas_i_2'] !== null ? Autolinker.link(String(feature.properties['tablas_i_2'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_jaca_inventario_forestal_disuelto_1_0(feature) {
+            switch(String(feature.properties['tablas_i_1'])) {
+                case 'Abies alba':
+                    return {
+                pane: 'pane_jaca_inventario_forestal_disuelto_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.75)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(231,142,63,0.75)',
+            }
+                    break;
+                case 'Buxus sempervirens':
+                    return {
+                pane: 'pane_jaca_inventario_forestal_disuelto_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.75)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(106,220,133,0.75)',
+            }
+                    break;
+                case 'Crataegus monogyna':
+                    return {
+                pane: 'pane_jaca_inventario_forestal_disuelto_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.75)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(159,117,238,0.75)',
+            }
+                    break;
+                case 'Fraxinus angustifolia':
+                    return {
+                pane: 'pane_jaca_inventario_forestal_disuelto_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.75)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(51,218,207,0.75)',
+            }
+                    break;
+                case 'Juniperus oxycedrus':
+                    return {
+                pane: 'pane_jaca_inventario_forestal_disuelto_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.75)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(173,27,230,0.75)',
+            }
+                    break;
+                case 'Pinus halepensis':
+                    return {
+                pane: 'pane_jaca_inventario_forestal_disuelto_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.75)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(58,238,34,0.75)',
+            }
+                    break;
+                case 'Pinus nigra':
+                    return {
+                pane: 'pane_jaca_inventario_forestal_disuelto_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.75)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(200,51,86,0.75)',
+            }
+                    break;
+                case 'Pinus sylvestris':
+                    return {
+                pane: 'pane_jaca_inventario_forestal_disuelto_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.75)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(219,130,118,0.75)',
+            }
+                    break;
+                case 'Populus nigra':
+                    return {
+                pane: 'pane_jaca_inventario_forestal_disuelto_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.75)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(210,36,199,0.75)',
+            }
+                    break;
+                case 'Populus x canadensis':
+                    return {
+                pane: 'pane_jaca_inventario_forestal_disuelto_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.75)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(44,44,202,0.75)',
+            }
+                    break;
+                case 'Quercus faginea':
+                    return {
+                pane: 'pane_jaca_inventario_forestal_disuelto_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.75)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(186,207,81,0.75)',
+            }
+                    break;
+                case 'Quercus ilex':
+                    return {
+                pane: 'pane_jaca_inventario_forestal_disuelto_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.75)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(24,234,147,0.75)',
+            }
+                    break;
+                case 'Quercus pubescens (Q. humilis)':
+                    return {
+                pane: 'pane_jaca_inventario_forestal_disuelto_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.75)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(220,193,73,0.75)',
+            }
+                    break;
+                case 'Quercus pyrenaica':
+                    return {
+                pane: 'pane_jaca_inventario_forestal_disuelto_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.75)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(234,69,165,0.75)',
+            }
+                    break;
+                case 'Salix fragilis':
+                    return {
+                pane: 'pane_jaca_inventario_forestal_disuelto_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.75)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(70,174,215,0.75)',
+            }
+                    break;
+                case 'Salix spp.':
+                    return {
+                pane: 'pane_jaca_inventario_forestal_disuelto_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.75)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(110,222,13,0.75)',
+            }
+                    break;
+                default:
+                    return {
+                pane: 'pane_jaca_inventario_forestal_disuelto_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.75)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(19,87,204,0.75)',
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_jaca_inventario_forestal_disuelto_1');
+        map.getPane('pane_jaca_inventario_forestal_disuelto_1').style.zIndex = 401;
+        map.getPane('pane_jaca_inventario_forestal_disuelto_1').style['mix-blend-mode'] = 'normal';
+        var layer_jaca_inventario_forestal_disuelto_1 = new L.geoJson(json_jaca_inventario_forestal_disuelto_1, {
+            attribution: '',
+            pane: 'pane_jaca_inventario_forestal_disuelto_1',
+            onEachFeature: pop_jaca_inventario_forestal_disuelto_1,
+            style: style_jaca_inventario_forestal_disuelto_1_0,
+        });
+        bounds_group.addLayer(layer_jaca_inventario_forestal_disuelto_1);
+        map.addLayer(layer_jaca_inventario_forestal_disuelto_1);
+        var osmGeocoder = new L.Control.Geocoder({
+            collapsed: true,
+            position: 'topleft',
+            text: 'Search',
+            title: 'Testing'
+        }).addTo(map);
+        document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
+        .className += ' fa fa-search';
+        document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
+        .title += 'Search for a place';
+        var baseMaps = {};
+        L.control.layers(baseMaps,{'jaca_inventario_forestal_disuelto<br /><table><tr><td style="text-align: center;"><img src="legend/jaca_inventario_forestal_disuelto_1_Abiesalba0.png" /></td><td>Abies alba</td></tr><tr><td style="text-align: center;"><img src="legend/jaca_inventario_forestal_disuelto_1_Buxussempervirens1.png" /></td><td>Buxus sempervirens</td></tr><tr><td style="text-align: center;"><img src="legend/jaca_inventario_forestal_disuelto_1_Crataegusmonogyna2.png" /></td><td>Crataegus monogyna</td></tr><tr><td style="text-align: center;"><img src="legend/jaca_inventario_forestal_disuelto_1_Fraxinusangustifolia3.png" /></td><td>Fraxinus angustifolia</td></tr><tr><td style="text-align: center;"><img src="legend/jaca_inventario_forestal_disuelto_1_Juniperusoxycedrus4.png" /></td><td>Juniperus oxycedrus</td></tr><tr><td style="text-align: center;"><img src="legend/jaca_inventario_forestal_disuelto_1_Pinushalepensis5.png" /></td><td>Pinus halepensis</td></tr><tr><td style="text-align: center;"><img src="legend/jaca_inventario_forestal_disuelto_1_Pinusnigra6.png" /></td><td>Pinus nigra</td></tr><tr><td style="text-align: center;"><img src="legend/jaca_inventario_forestal_disuelto_1_Pinussylvestris7.png" /></td><td>Pinus sylvestris</td></tr><tr><td style="text-align: center;"><img src="legend/jaca_inventario_forestal_disuelto_1_Populusnigra8.png" /></td><td>Populus nigra</td></tr><tr><td style="text-align: center;"><img src="legend/jaca_inventario_forestal_disuelto_1_Populusxcanadensis9.png" /></td><td>Populus x canadensis</td></tr><tr><td style="text-align: center;"><img src="legend/jaca_inventario_forestal_disuelto_1_Quercusfaginea10.png" /></td><td>Quercus faginea</td></tr><tr><td style="text-align: center;"><img src="legend/jaca_inventario_forestal_disuelto_1_Quercusilex11.png" /></td><td>Quercus ilex</td></tr><tr><td style="text-align: center;"><img src="legend/jaca_inventario_forestal_disuelto_1_QuercuspubescensQhumilis12.png" /></td><td>Quercus pubescens (Q. humilis)</td></tr><tr><td style="text-align: center;"><img src="legend/jaca_inventario_forestal_disuelto_1_Quercuspyrenaica13.png" /></td><td>Quercus pyrenaica</td></tr><tr><td style="text-align: center;"><img src="legend/jaca_inventario_forestal_disuelto_1_Salixfragilis14.png" /></td><td>Salix fragilis</td></tr><tr><td style="text-align: center;"><img src="legend/jaca_inventario_forestal_disuelto_1_Salixspp15.png" /></td><td>Salix spp.</td></tr><tr><td style="text-align: center;"><img src="legend/jaca_inventario_forestal_disuelto_1_16.png" /></td><td></td></tr></table>': layer_jaca_inventario_forestal_disuelto_1,"OpenStreetMap": layer_OpenStreetMap_0,}).addTo(map);
+        setBounds();
+        </script>
+    </body>
+</html>

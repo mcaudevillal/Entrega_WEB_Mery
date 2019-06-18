@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Web CV MARIA CAUDEVILLA LAMBAN</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap"
+
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic"
+
+      rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet"
+
+      type="text/css">
+    <!-- =======================================================
+    Theme Name: MI CV    Author: Maria Caudevilla Lambán     ======================================================= -->
+  </head>
+  <body>
+    <div class="wrapper" id="wrapper">
+      <header>
+        <div class="banner row" id="banner">
+          <div class="parallax text-center" style="background-image: url(F:/Visualizacion_online_Caudevilla_Maria/MyResume/portada_cantabria.jpg);">
+            <div class="parallax-pattern-overlay">
+              <div class="container align-center" style="height:1000px;padding-top:250px;">
+                <a href="#"><img id="site-title" class=" wow fadeInDown" wow-data-delay="0.0s"
+
+                    wow-data-duration="0.8s" src="F:\Visualizacion_online_Caudevilla_Maria\MyResume\foto_cara.jpg"
+
+                    alt="" width="999999" height="275"></a>
+                <h2 class="intro"><a href="F:/Visualizacion_online_Caudevilla_Maria/MyResume/CV_maria_caudevilla.html"> Maria <br> Caudevilla <br> Lambán</a></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="menu">
+          <div class="navbar-wrapper">
+            <div class="container">
+              <div class="navwrapper">
+                <div class="navbar navbar-inverse navbar-static-top">
+                  <div class="container">
+                    <div class="navArea">
+                      <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                          <li class="menuItem active"><a href="#wrapper">Home</a></li>
+                          <li class="menuItem"><a href="#aboutus">Sobre mí</a></li>
+                          <li class="menuItem"><a href="#specialties">Capacidades</a></li>
+                          <li class="menuItem"><a href="#feedback">Formación</a></li>
+                          <li class="menuItem"><a href="#contact">Contacto</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!--Sobre mí-->
+      <section class="aboutus" id="aboutus">
+        <div class="container">
+          <div class="heading text-center">
+            <h2>Sobre mí</h2>
+            <h3 style="text-align: center;">¡Hola a tod@s! ¡Gracias por visitar
+              mi web personal! Os la resumo: actualmente estudio un Máster en
+              Tecnologías de la Información Geográfica 🌏. Me interesan el mundo
+              de lo smart y la innovación tecnológica así como su aplicación al
+              sector turístico.</h3>
+          </div>
+        </div>
+      </section>
+      <!--Capacidades-->
+      <section class="specialties" id="specialties">
+        <div class="container">
+          <div class="heading text-center">
+            <h2 style="margin-top: -53px;">Capacidades</h2>
+            <h3>Me considero una persona sociable, educada, organizada y
+              creativa, con la capacidad de trabajar en equipo. Soy responsable,
+              dinámica, exigente y perfeccionista en lo que hago.</h3>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 wow fadeInRight" data-wow-offset="0" data-wow-delay="0.3s"
+
+              "="">
+              <div class="skill ">
+                <div class="progress-wrap ">
+                  <h3>Inglés</h3>
+                  <div class="progress ">
+                    <div class="progress-bar color1 " role="progressbar " aria-valuenow="40 "
+
+                      aria-valuemin="0 " aria-valuemax="100 " style="width: 100% ">
+                      <span class="bar-width ">100%</span> </div>
+                  </div>
+                </div>
+                <div class="progress-wrap ">
+                  <h3>Francés</h3>
+                  <div class="progress ">
+                    <div class="progress-bar color2 " role="progressbar " aria-valuenow="20 "
+
+                      aria-valuemin="0 " aria-valuemax="100 " style="width: 80% ">
+                      <span class="bar-width ">80%</span> </div>
+                  </div>
+                </div>
+                <div class="progress-wrap ">
+                  <h3>Alemán</h3>
+                  <div class="progress ">
+                    <div class="progress-bar color3 " role="progressbar " aria-valuenow="60 "
+
+                      aria-valuemin="0 " aria-valuemax="100 " style="width: 40% ">
+                      <span class="bar-width ">40%</span> </div>
+                  </div>
+                </div>
+                <div class="progress-wrap ">
+                  <h3>Italiano</h3>
+                  <div class="progress ">
+                    <div class="progress-bar color4 " role="progressbar " aria-valuenow="80 "
+
+                      aria-valuemin="0 " aria-valuemax="100 " style="width: 50% ">
+                      <span class="bar-width ">50%</span> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 wow fadeInRight " data-wow-offset="0 " data-wow-delay="0.6s "
+
+              "=""> <img src="F:\Visualizacion_online_Caudevilla_Maria\MyResume\idiomas.jpg"
+
+                class="img-responsive" width="350" height="350"> </div>
+          </div>
+        </div>
+        <!--Educacion-->
+        <nav> <span class="icon nav-prev"></span> <span class="icon nav-next"></span>
+          <span class="icon nav-close"></span> </nav>
+        <div class="info-keys icon">Navigate with arrow keys</div>
+      </section>
+      <!-- // end slideshow --> </div>
+    <!-- // grid-gallery -->
+    <!--education-->
+    <section class="feedback" id="feedback">
+      <div class="container">
+        <div class="heading">
+          <h2>Formación</h2>
+        </div>
+      </div>
+      <div class="container">
+        <div class="col-md-4 wow fadeInRight" data-wow-offset="0" data-wow-delay="0.3s">
+          <div class="text-center">
+            <div class="hi-icon-wrap hi-icon-effect">
+              <h4>Máster en Tecnologías de la Información Geográfica para la
+                Ordenación del Territorio: Sistemas de Información Geográfica y
+                Teledetección</h4>
+              <h5>2018 -2019 (actualidad)</h5>
+              <i class="fa fa-laptop"></i>
+              <p>Universidad de Zaragoza</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 wow fadeInRight" data-wow-offset="0" data-wow-delay="0.6s">
+          <div class="text-center">
+            <div class="hi-icon-wrap hi-icon-effect">
+              <h4>Bachelor Business In Tourism With Event Management, 2017</h4>
+              <h5>Institute Technology of Sligo, Ireland</h5>
+              <p><br>
+              </p>
+              <p><br>
+              </p>
+              <i class="fa fa-book"></i>
+              <p>Calificación media: 9.46 (with distinction)</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 wow fadeInRight" data-wow-offset="0" data-wow-delay="0.9s">
+          <div class="text-center">
+            <div class="hi-icon-wrap hi-icon-effect" style="height: 551px;">
+              <h4>Grado en Turismo, 2018</h4>
+              <h5>Universidad de Granada</h5>
+              <p><br>
+              </p>
+              <p><br>
+              </p>
+              <p style="margin-top: -19px;"><br>
+              </p>
+              <i class="fa fa-gear"></i>
+              <p style="margin-top: 5px; height: 29px;">Calificación media:
+                8.341</p>
+              <br>
+              <ul style="text-align: left; margin-top: -26px;">
+                <li>2014 – 2016: Universidad de Granada</li>
+                <li>2016 – 2017: IT Sligo, ERASMUS</li>
+                <li>2017 – 2018: Universidad de Zaragoza, SICUE</li>
+              </ul>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row" style="text-align: justify;"> TFM: El uso del agua como
+          recurso natural y su gestión en el desarrollo del turismo recreacional
+          en alta montaña, con especial énfasis en el turismo de nieve en el
+          Pirineo Aragonés (Calificación: 9,3) </div>
+      </div>
+    </section>
+    <!--education-->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="heading">
+          <h2>Contacto</h2>
+          <h3>Si mi perfil te interesa no dudes en contactar conmigo a través
+            del siguiente formulario.</h3>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="map"> <iframe src="https://www.google.com/maps/embed?pb=%211m18%211m12%211m3%211d2981.498564549383%212d-0.8942971842674345%213d41.64496888794966%212m3%211f0%212f0%213f0%213m2%211i1024%212i768%214f13.1%213m3%211m2%211s0xd5914db9db9c9bd%3A0x23ba30d2c8b57d92%212sCalle+de+Calatayud%2C+3%2C+50005+Zaragoza%215e0%213m2%211ses%212ses%214v1559208916061%215m2%211ses%212ses"
+
+                style="border:0" allowfullscreen="" width="600" height="450" frameborder="0"></iframe>
+            </div>
+          </div>
+          <div class="contact-info">
+            <div class="col-md-5">
+              <h4>Información de contacto</h4>
+              <ul>
+                <li><i class="fa fa-home fa-2x"></i> Calle Calatayud 3, 1ºI,
+                  50005 Zaragoza</li>
+                <li><i class="fa fa-phone fa-2x"></i> +34 637 29 19 13</li>
+                <li><i class="fa fa-envelope fa-2x"></i>
+                  mariacaudevillalam@gmail.com</li>
+                <li><i class="fa fa-download fa-2x"></i><a href="F:\Visualizacion_online_Caudevilla_Maria\MyResume\cv_caudevilla_maria_es.pdf"
+
+                    download="Descarga mi CV"> Descarga mi CV </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div id="sendmessage">Su mensaje ha sido enviado. ¡Muchas gracias!</div>
+            <div id="errormessage"></div>
+            <form action="" method="post" role="form" class="contactForm">
+              <div class="form-group"> <input name="name" class="form-control"
+
+                  id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars"
+
+                  type="text">
+                <div class="validation"></div>
+              </div>
+              <div class="form-group"> <input class="form-control" name="email"
+
+                  id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email"
+
+                  type="email">
+                <div class="validation"></div>
+              </div>
+              <div class="form-group"> <input class="form-control" name="subject"
+
+                  id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject"
+
+                  type="text">
+                <div class="validation"></div>
+              </div>
+              <div class="form-group"> <textarea class="form-control" name="message"
+
+rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validation"></div>
+              </div>
+              <div class="text-center"><button type="submit" class="contact submit">Send
+                  Message</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--pie de página-->
+    <section class="footer" id="footer">
+      <p class="text-center"> <a href="#wrapper" class="gototop"><i class="fa fa-angle-double-up fa-2x"></i></a>
+      </p>
+      <div class="container">
+        <ul>
+          <li><a href="https://twitter.com/CaudevillaMaria"><i class="fa fa-twitter"></i></a><br>
+          </li>
+          <li><a href="https://www.facebook.com/maria.caudevillalamban.75"><i class="fa fa-facebook"></i></a><br>
+          </li>
+          <li><a href="https://www.linkedin.com/in/maria-caudevilla-lamban"><i class="fa fa-linkedin"></i></a><br>
+          </li>
+        </ul>
+        <p>© MARIA CAUDEVILLA LAMBAN. Todos los derechos reservados</p>
+        <div class="credits"> Designed by Maria Caudevilla </div>
+      </div>
+    </section>
+    <script src="js/jquery.js"></script>
+    <script src="js/modernizr.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menustick.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/easing.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/masonry.js"></script>
+    <script src="js/imgloaded.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/colorfinder.js"></script>
+    <script src="js/gridscroll.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+    wow = new WOW({}).init();
+  </script>
+    <script type="text/javascript">
+    jQuery(function($) {
+      $(document).ready(function() {
+        //enabling stickUp on the '.navbar-wrapper' class
+        $('.navbar-wrapper').stickUp({
+          parts: {
+            0: 'banner',
+            1: 'aboutus',
+            2: 'specialties',
+            3: 'gallery',
+            4: 'feedback',
+            5: 'contact'
+          },
+          itemClass: 'menuItem',
+          itemHover: 'active',
+          topMargin: 'auto',
+          position: 'fixed'
+        });
+      });
+    });
+  </script>
+    <script src="contactform/contactform.js"></script>
+  </body>
+</html>
